@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TuneView - Music Search</title> <!-- Updated title -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- NEW: Google Font Link for Source Sans Pro -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- <link rel="icon" href="favicon.ico" type="image/x-icon"> -->
+</head>
+<body>
+    <!-- Fixed Top-Left Logo (Results View Back Button) -->
+    <!-- Updated Text -->
+    <div id="page-top-logo" style="display: none;" title="Back to Search">TuneView</div>
+
+    <!-- Search View Container -->
+    <div class="main-container" id="search-view">
+         <!-- Updated Text -->
+         <div class="logo"> TuneView </div>
+         <form id="search-form">
+              <div class="search-bar-container">
+                 <input type="text" id="search-input" name="q" title="Search Music" aria-label="Search Music" placeholder="Search songs, artists, albums...">
+              </div>
+             <div class="button-container">
+                 <button type="submit" id="music-search-btn">Search Music</button>
+                 <button type="submit" id="random-song-btn">Random Song</button>
+             </div>
+         </form>
+    </div>
+
+    <!-- Results View Container -->
+    <div class="results-container" id="results-view" style="display: none;">
+         <!-- Header -->
+         <div class="results-header">
+              <h2><span id="results-title">Results for</span> <span id="query-display"></span></h2>
+         </div>
+         <!-- Preview Disclaimer -->
+         <p class="preview-disclaimer" id="preview-info"> Note: Play buttons provide short audio previews only. </p>
+         <!-- Loading Indicator -->
+         <div id="loading-indicator" style="display: none;">Loading...</div>
+         <!-- Results List -->
+         <div id="results-list"> </div>
+         <!-- Message Area -->
+         <div id="message-area" style="display: none;"></div>
+         <!-- Search Another Button -->
+         <button id="search-another-random-btn" style="display: none;">Find Another Random Song</button>
+    </div>
+
+    <!-- Top-Right Search Bar (Moved after main containers for clarity) -->
+    <div id="top-right-search-container" style="display: none;">
+        <form id="top-right-search-form">
+            <input type="search" id="top-right-search-input" placeholder="Search again...">
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
